@@ -4,8 +4,7 @@ resource "aws_instance" "server" {
     key_name = "${var.key_name}"
     count = "${var.servers}"
     security_groups = ["${aws_security_group.consul.name}"]
-    vpc_security_group_ids = [ "subnet-7cf96b19" ]
-    placement_group = "${var.vpc_id}"
+    vpc_security_group_ids = [ "${aws_security_group.consul.id}" ]
 
     connection {
         user = "${lookup(var.user, var.platform)}"
