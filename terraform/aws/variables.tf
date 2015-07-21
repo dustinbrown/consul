@@ -7,6 +7,10 @@ variable "vpc_id" {
   default = "vpc-52668937"
 }
 
+variable "subnet_id" {
+  default = "subnet-7cf96b19"
+}
+
 variable "user" {
     default = {
         ubuntu = "ubuntu"
