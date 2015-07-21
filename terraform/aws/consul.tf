@@ -3,7 +3,7 @@ resource "aws_instance" "server" {
     instance_type = "${var.instance_type}"
     key_name = "${var.key_name}"
     count = "${var.servers}"
-    vpc_security_group_ids = [ "${aws_security_group.consul.vpc_id}" ]
+    vpc_security_group_ids = [ "${aws_security_group.consul.id}" ]
 
     connection {
         user = "${lookup(var.user, var.platform)}"
