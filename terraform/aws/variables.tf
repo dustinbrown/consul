@@ -3,6 +3,10 @@ variable "platform" {
     description = "The OS Platform"
 }
 
+variable "vpc_id" {
+  default = "vpc-52668937"
+}
+
 variable "user" {
     default = {
         ubuntu = "ubuntu"
